@@ -3,7 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .forms import InputForm
 import time
 
-UPPER_LIMIT = 900
+UPPER_LIMIT = 100
 
 
 def memoize(f):
@@ -31,8 +31,8 @@ def getfibonacci(number_input):
         return 'Number has to be an integer'
     if number <= 0:
         return 'Number cannot be zero or negative'
-    if number >= UPPER_LIMIT:
-        return 'I can only compute until'
+    if number > UPPER_LIMIT:
+        return 'I can only compute until ' + str(UPPER_LIMIT)
     fib = fibonacci(number)
     return fib
 
