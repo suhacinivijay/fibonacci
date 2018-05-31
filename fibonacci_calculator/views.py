@@ -17,23 +17,30 @@ def memoize(f):
             return cache[args]
     return decorated_function
 
+
 @memoize
 def fibonacci(n):
     return n if n < 2 else fibonacci(n-2) + fibonacci(n-1)
 
 
-def getfibonacci(number_input):
+def get_fibonacci(number_input):
+
     if number_input is None:
         return 'Cannot be None'
+
     try:
         number = int(number_input)
     except ValueError:
         return 'Number has to be an integer'
+
     if number <= 0:
         return 'Number cannot be zero or negative'
+
     if number > UPPER_LIMIT:
         return 'I can only compute until ' + str(UPPER_LIMIT)
+
     fib = fibonacci(number)
+
     return fib
 
 
@@ -44,7 +51,7 @@ def index(request):
         if form.is_valid():
             start = time.clock()
             number_input = form.cleaned_data['number_input']
-            fib = getfibonacci(number_input)
+            fib = get_fibonacci(number_input)
             end = time.clock()
             time_taken = end - start
             return render(request, 'index.html', {'form': form, 'time_taken': time_taken, 'result': fib, 'number': number_input})
