@@ -1,1 +1,1 @@
-web: gunicorn Fibonacci.py
+web: gunicorn Fibonacci.wsgi
