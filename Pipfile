@@ -6,7 +6,7 @@ name = "pypi"
 [dev-packages]
 
 [packages]
-django = "*"
+django = "1.11.13"
 
 [requires]
 python_version = "2.7"
