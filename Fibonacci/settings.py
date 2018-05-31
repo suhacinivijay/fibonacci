@@ -25,7 +25,7 @@ SECRET_KEY = 'd8*pd0b9d&v*vn$88xbtqddae7t6r6w%$q37_&2ln*)(#c8#e3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fathomless-depths-96544.herokuapp.com']
+ALLOWED_HOSTS = ['fibonacci-n.herokuapp.com']
 
 
 # Application definition
