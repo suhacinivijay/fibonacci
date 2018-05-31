@@ -6,9 +6,7 @@ name = "pypi"
 [dev-packages]
 
 [packages]
-Django = "==1.11.13"
-pkg-resources = "==0.0.0"
-pytz = "==2018.4"
+django = "*"
 
 [requires]
 python_version = "2.7"
